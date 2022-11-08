@@ -33,5 +33,25 @@ namespace AkasztofaKonzol.SajatOsztaly
                 }
             }
         }
+
+        /*
+            nehez = true -> 8 -
+            nehez = false -> 5 - 7
+
+           a véletlen szót kivesszük a 'szos'-ból
+        */
+
+        public string VeletlenSzo(bool nehez)
+        {
+            Random rnd = new Random();
+            if (nehez)
+            {
+                return szos.Where(x => x.Length >= 8).ToList()[rnd.Next(szos.Count(x => x.Length >= 8))];
+            }
+            else
+            {
+                return szos.Where(x => x.Length >= 5 && x.Length <= 7).ToList()[rnd.Next(szos.Count(x => x.Length >= 5 && x.Length <= 7))];
+            }
+        }
     }
 }

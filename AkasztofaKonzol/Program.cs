@@ -13,6 +13,8 @@ namespace AkasztofaKonzol
         static void Main(string[] args)
         {
             Console.WriteLine(szotar.SzavakSzama);
+            Console.WriteLine("Nehéz: " + szotar.VeletlenSzo(true));
+            Console.WriteLine("Könnyű: " + szotar.VeletlenSzo(false));
 
             Console.ReadKey();
         }
