@@ -9,14 +9,14 @@ namespace AkasztofaKonzol.SajatOsztaly
 {
     public class Szavak
     {
-        List<string> szos = new List<string>();
+        List<string> szosKonnyu = new List<string>();
+        List<string> szosNehez = new List<string>();
 
         public int SzavakSzama { get; private set; }
 
         public Szavak()
         {
             SzavakFeltoltese();
-            SzavakSzama = szos.Count;
         }
 
         private void SzavakFeltoltese()
@@ -26,12 +26,17 @@ namespace AkasztofaKonzol.SajatOsztaly
                 while (!sr.EndOfStream)
                 {
                     string sor = sr.ReadLine();
-                    if (sor.Length >= 5)
+                    if (sor.Length >= 5 && sor.Length <= 7)
                     {
-                        szos.Add(sor);
+                        szosKonnyu.Add(sor);
+                    }
+                    else if (sor.Length >= 8)
+                    {
+                        szosNehez.Add(sor);
                     }
                 }
             }
+            SzavakSzama = szosKonnyu.Count + szosNehez.Count;
         }
 
         /*
@@ -44,14 +49,22 @@ namespace AkasztofaKonzol.SajatOsztaly
         public string VeletlenSzo(bool nehez)
         {
             Random rnd = new Random();
+            string valasztott = "";
             if (nehez)
             {
-                return szos.Where(x => x.Length >= 8).ToList()[rnd.Next(szos.Count(x => x.Length >= 8))];
+                int random = rnd.Next(szosNehez.Count);
+                valasztott = szosNehez[random];
+                szosNehez.RemoveAt(random);
+                //Console.WriteLine(szosNehez.Contains(valasztott));
             }
             else
             {
-                return szos.Where(x => x.Length >= 5 && x.Length <= 7).ToList()[rnd.Next(szos.Count(x => x.Length >= 5 && x.Length <= 7))];
+                int random = rnd.Next(szosKonnyu.Count);
+                valasztott = szosKonnyu[random];
+                szosKonnyu.RemoveAt(random);
+                //Console.WriteLine(szosKonnyu.Contains(valasztott));
             }
+            return valasztott;
         }
     }
 }
