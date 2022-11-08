@@ -25,7 +25,11 @@ namespace AkasztofaKonzol.SajatOsztaly
             {
                 while (!sr.EndOfStream)
                 {
-                    szos.Add(sr.ReadLine());
+                    string sor = sr.ReadLine();
+                    if (sor.Length >= 5)
+                    {
+                        szos.Add(sor);
+                    }
                 }
             }
         }
