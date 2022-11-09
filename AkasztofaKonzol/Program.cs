@@ -12,10 +12,8 @@ namespace AkasztofaKonzol
         static Szavak szotar = new Szavak();
         static void Main(string[] args)
         {
-            Console.WriteLine(szotar.SzavakSzama);
-            Console.WriteLine("Nehéz: " + szotar.VeletlenSzo(true));
-            Console.WriteLine("Könnyű: " + szotar.VeletlenSzo(false));
-            Console.WriteLine(szotar.SzavakSzama);
+            Game janos = new Game("János", true);
+            Game gabor = new Game("Gábor", false);
 
             Console.ReadKey();
         }
