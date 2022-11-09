@@ -33,11 +33,31 @@ namespace AkasztofaKonzol.SajatOsztaly
 
         private bool nehezseg;
 
-        private string helytelen;
+        private string helytelens;
 
-        public string Helytelen
+        public string Helytelens
         {
-            get { return helytelen; }
+            get { return helytelens; }
+        }
+
+        public void Vizsgalat(string tipp)
+        {
+            if (!NemKitalalt.Contains(tipp) && !helytelens.Contains(tipp))
+            {
+                if (szo.Contains(tipp))
+                {
+                    //el kell helyezni a megfelelő helyre
+                }
+                else
+                {
+                    helytelens += tipp;
+                    Lehetoseg--;
+                    if (Lehetoseg == 0)
+                    {
+                        Vege = true;
+                    }
+                }
+            }
         }
 
         private int tipp;
@@ -54,7 +74,7 @@ namespace AkasztofaKonzol.SajatOsztaly
             this.nev = nev;
             this.nehezseg = nehezseg;
             szo = szavas.VeletlenSzo(nehezseg);
-
+            Console.WriteLine(szo);
             AlapBeallitasok();
         }
 
@@ -63,7 +83,7 @@ namespace AkasztofaKonzol.SajatOsztaly
             osszProba = szo.Length;
             Lehetoseg = szo.Length;
             Vege = false;
-            helytelen = "";
+            helytelens = "";
             NemKitalalt = "";
             for (int i = 0; i < szo.Length; i++)
             {
