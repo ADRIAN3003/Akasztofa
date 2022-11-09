@@ -48,23 +48,28 @@ namespace AkasztofaKonzol.SajatOsztaly
 
         public string VeletlenSzo(bool nehez)
         {
-            Random rnd = new Random();
             string valasztott = "";
-            if (nehez)
-            {
-                int random = rnd.Next(szosNehez.Count);
-                valasztott = szosNehez[random];
-                szosNehez.RemoveAt(random);
-                //Console.WriteLine(szosNehez.Contains(valasztott));
-            }
-            else
-            {
-                int random = rnd.Next(szosKonnyu.Count);
-                valasztott = szosKonnyu[random];
-                szosKonnyu.RemoveAt(random);
-                //Console.WriteLine(szosKonnyu.Contains(valasztott));
-            }
+            valasztott = nehez ? Kivalaszt(szosNehez) : Kivalaszt(szosKonnyu);
+            SzavakSzama = szosKonnyu.Count + szosNehez.Count;
+            //if (nehez)
+            //{
+            //    valasztott = Kivalaszt(szosNehez);
+            //}
+            //else
+            //{
+            //    valasztott = Kivalaszt(szosKonnyu);
+            //}
             return valasztott;
+        }
+
+        private string Kivalaszt(List<string> szosNehez)
+        {
+            string tmp = "";
+            Random rnd = new Random();
+            int random = rnd.Next(szosNehez.Count);
+            tmp = szosNehez[random];
+            szosNehez.RemoveAt(random);
+            return tmp;
         }
     }
 }
