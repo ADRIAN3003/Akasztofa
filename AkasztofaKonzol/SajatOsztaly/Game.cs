@@ -8,6 +8,8 @@ namespace AkasztofaKonzol.SajatOsztaly
 {
     public class Game
     {
+        public bool Vege { get; private set; }
+
         private Szavak szavas = new Szavak();
 
         private string nev;
