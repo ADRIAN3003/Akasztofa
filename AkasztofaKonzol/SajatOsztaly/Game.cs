@@ -62,6 +62,7 @@ namespace AkasztofaKonzol.SajatOsztaly
         {
             osszProba = szo.Length;
             Lehetoseg = szo.Length;
+            Vege = false;
             helytelen = "";
             NemKitalalt = "";
             for (int i = 0; i < szo.Length; i++)
