@@ -21,18 +21,21 @@ namespace AkasztofaKonzol
                 Console.WriteLine($"Szóhossz: " + gabor.OsszProba);
                 Console.WriteLine($"Lehetőség: " + gabor.Lehetoseg);
                 Console.WriteLine($"Helytelen tippek: " + gabor.Helytelens);
+                Console.WriteLine($"Nem kitalált: " + gabor.NemKitalalt);
                 Console.Write("Kérek egy tippet: ");
                 tipp = Console.ReadLine();
-
+                Console.WriteLine("-----------------------------------------");
                 gabor.Vizsgalat(tipp);
             }
 
             if (gabor.Lehetoseg == 0)
             {
+                Console.WriteLine(gabor.ToString());
                 Console.WriteLine("A játéknak vége");
             }
             else
             {
+                Console.WriteLine(gabor.NemKitalalt);
                 Console.WriteLine("Sikerült kitalálni");
             }
 

@@ -47,6 +47,23 @@ namespace AkasztofaKonzol.SajatOsztaly
                 if (szo.Contains(tipp))
                 {
                     //el kell helyezni a megfelelő helyre
+                    //szo = "ALMA"
+                    //tipp = "A"
+                    //nemkitalalt = "_ _ _ _"
+
+                    string tmp = "";
+                    for (int i = 0; i < szo.Length; i++)
+                    {
+                        if (szo[i].ToString() == tipp)
+                        {
+                            tmp += tipp;
+                        } 
+                        else
+                        {
+                            tmp += NemKitalalt[i];
+                        }
+                    }
+                    NemKitalalt = tmp;
                 }
                 else
                 {
@@ -57,6 +74,11 @@ namespace AkasztofaKonzol.SajatOsztaly
                         Vege = true;
                     }
                 }
+            }
+
+            if (!NemKitalalt.Contains("_"))
+            {
+                Vege = true;
             }
         }
 
@@ -89,6 +111,11 @@ namespace AkasztofaKonzol.SajatOsztaly
             {
                 NemKitalalt += "_";
             }
+        }
+
+        public override string ToString()
+        {
+            return szo;
         }
     }
 }
