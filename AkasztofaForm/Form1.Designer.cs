@@ -29,7 +29,30 @@ namespace AkasztofaForm
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnKilepes = new System.Windows.Forms.Button();
+            this.pbKepek = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKepek)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnKilepes
+            // 
+            this.btnKilepes.Location = new System.Drawing.Point(977, 581);
+            this.btnKilepes.Name = "btnKilepes";
+            this.btnKilepes.Size = new System.Drawing.Size(88, 33);
+            this.btnKilepes.TabIndex = 0;
+            this.btnKilepes.Text = "Kilépés";
+            this.btnKilepes.UseVisualStyleBackColor = true;
+            this.btnKilepes.Click += new System.EventHandler(this.btnKilepes_Click);
+            // 
+            // pbKepek
+            // 
+            this.pbKepek.Image = global::AkasztofaForm.Properties.Resources.kep0;
+            this.pbKepek.Location = new System.Drawing.Point(265, 59);
+            this.pbKepek.Name = "pbKepek";
+            this.pbKepek.Size = new System.Drawing.Size(547, 377);
+            this.pbKepek.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbKepek.TabIndex = 1;
+            this.pbKepek.TabStop = false;
             // 
             // frmFo
             // 
@@ -37,6 +60,8 @@ namespace AkasztofaForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 626);
             this.ControlBox = false;
+            this.Controls.Add(this.pbKepek);
+            this.Controls.Add(this.btnKilepes);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -44,11 +69,15 @@ namespace AkasztofaForm
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Játék";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmFo_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.pbKepek)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnKilepes;
+        private System.Windows.Forms.PictureBox pbKepek;
     }
 }
 

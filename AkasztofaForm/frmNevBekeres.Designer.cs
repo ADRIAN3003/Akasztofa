@@ -68,22 +68,28 @@ namespace AkasztofaForm
             // 
             // btnKezdes
             // 
+            this.btnKezdes.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnKezdes.FlatAppearance.BorderSize = 0;
+            this.btnKezdes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKezdes.Location = new System.Drawing.Point(27, 160);
             this.btnKezdes.Name = "btnKezdes";
             this.btnKezdes.Size = new System.Drawing.Size(90, 33);
             this.btnKezdes.TabIndex = 3;
             this.btnKezdes.Text = "Kezdés";
-            this.btnKezdes.UseVisualStyleBackColor = true;
+            this.btnKezdes.UseVisualStyleBackColor = false;
             this.btnKezdes.Click += new System.EventHandler(this.btnKezdes_Click);
             // 
             // btnKilepes
             // 
+            this.btnKilepes.BackColor = System.Drawing.Color.Red;
+            this.btnKilepes.FlatAppearance.BorderSize = 0;
+            this.btnKilepes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKilepes.Location = new System.Drawing.Point(137, 160);
             this.btnKilepes.Name = "btnKilepes";
             this.btnKilepes.Size = new System.Drawing.Size(90, 33);
             this.btnKilepes.TabIndex = 3;
             this.btnKilepes.Text = "Kilépés";
-            this.btnKilepes.UseVisualStyleBackColor = true;
+            this.btnKilepes.UseVisualStyleBackColor = false;
             this.btnKilepes.Click += new System.EventHandler(this.btnKilepes_Click);
             // 
             // rbKonnyu

@@ -31,5 +31,10 @@ namespace AkasztofaForm
         {
             Application.Exit();
         }
+
+        private void btnKilepes_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
