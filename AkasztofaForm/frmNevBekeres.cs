@@ -27,7 +27,7 @@ namespace AkasztofaForm
         {
             if (tbNev.Text.Length == 0)
             {
-                MessageBox.Show("A játékosnév mező nem lehet üres!");
+                MessageBox.Show("A játékosnév mező nem lehet üres!", "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
             else
             {
