@@ -76,5 +76,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AkasztofaKonzol\AkasztofaKonzol.csproj">
+      <Project>{357040f0-d497-4682-9d12-b0723a82f83a}</Project>
+      <Name>AkasztofaKonzol</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
