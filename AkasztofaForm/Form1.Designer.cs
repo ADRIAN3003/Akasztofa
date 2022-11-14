@@ -1,7 +1,7 @@
 ﻿
 namespace AkasztofaForm
 {
-    partial class Form1
+    partial class frmFo
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace AkasztofaForm
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // frmFo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -40,7 +40,7 @@ namespace AkasztofaForm
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Form1";
+            this.Name = "frmFo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Játék";
             this.ResumeLayout(false);
