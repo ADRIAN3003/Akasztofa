@@ -8,6 +8,8 @@ namespace AkasztofaKonzol.SajatOsztaly
 {
     public class Game
     {
+        public int SzoHossz { get { return szo.Length; } }
+
         public bool Vege { get; private set; }
 
         private Szavak szavas = new Szavak();
@@ -101,8 +103,8 @@ namespace AkasztofaKonzol.SajatOsztaly
 
         private void AlapBeallitasok()
         {
-            osszProba = szo.Length;
-            Lehetoseg = szo.Length;
+            osszProba = 10;
+            Lehetoseg = 10;
             Vege = false;
             helytelens = "";
             NemKitalalt = "";

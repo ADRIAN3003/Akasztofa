@@ -52,7 +52,7 @@ namespace AkasztofaKonzol.SajatOsztaly
 
         private void AdatokKiirasa()
         {
-            Console.WriteLine($"Szóhossz: " + jatek.OsszProba);
+            Console.WriteLine($"Szóhossz: " + jatek.SzoHossz);
             Console.WriteLine($"Lehetőség: " + jatek.Lehetoseg);
             Console.WriteLine($"Helytelen tippek: " + jatek.Helytelens);
             Console.WriteLine($"Nem kitalált: " + jatek.NemKitalalt);
