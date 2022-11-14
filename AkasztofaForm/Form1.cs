@@ -25,6 +25,21 @@ namespace AkasztofaForm
 
             jatek = new Game(nev, nehezseg);
             this.Text += " - " + nev + (nehezseg ? " - Könnyű" : " - Nehéz");
+            lblEddigKitalalt.Text = SzetHuz(jatek.NemKitalalt);
+        }
+
+        private string SzetHuz(string nemKitalalt)
+        {
+            string tmp = "";
+
+            int j = 0;
+            while (nemKitalalt.Length - 1 > j)
+            {
+                tmp += nemKitalalt[j] + " ";
+            }
+            tmp += nemKitalalt[j];
+
+            return tmp;
         }
 
         private void frmFo_FormClosed(object sender, FormClosedEventArgs e)

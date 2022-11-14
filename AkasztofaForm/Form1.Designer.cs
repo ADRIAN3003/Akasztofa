@@ -31,6 +31,7 @@ namespace AkasztofaForm
         {
             this.btnKilepes = new System.Windows.Forms.Button();
             this.pbKepek = new System.Windows.Forms.PictureBox();
+            this.lblEddigKitalalt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbKepek)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,12 +55,23 @@ namespace AkasztofaForm
             this.pbKepek.TabIndex = 1;
             this.pbKepek.TabStop = false;
             // 
+            // lblEddigKitalalt
+            // 
+            this.lblEddigKitalalt.Font = new System.Drawing.Font("Consolas", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEddigKitalalt.Location = new System.Drawing.Point(182, 457);
+            this.lblEddigKitalalt.Name = "lblEddigKitalalt";
+            this.lblEddigKitalalt.Size = new System.Drawing.Size(712, 79);
+            this.lblEddigKitalalt.TabIndex = 2;
+            this.lblEddigKitalalt.Text = "label1";
+            this.lblEddigKitalalt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmFo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 626);
             this.ControlBox = false;
+            this.Controls.Add(this.lblEddigKitalalt);
             this.Controls.Add(this.pbKepek);
             this.Controls.Add(this.btnKilepes);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -78,6 +90,7 @@ namespace AkasztofaForm
 
         private System.Windows.Forms.Button btnKilepes;
         private System.Windows.Forms.PictureBox pbKepek;
+        private System.Windows.Forms.Label lblEddigKitalalt;
     }
 }
 

@@ -116,9 +116,11 @@ namespace AkasztofaForm
             // 
             // frmUjJatek
             // 
+            this.AcceptButton = this.btnKezdes;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
+            this.CancelButton = this.btnKilepes;
             this.ClientSize = new System.Drawing.Size(255, 215);
             this.Controls.Add(this.btnKilepes);
             this.Controls.Add(this.btnKezdes);
