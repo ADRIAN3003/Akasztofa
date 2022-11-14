@@ -9,10 +9,17 @@ namespace AkasztofaKonzol
 {
     class Program
     {
-        static Szavak szotar = new Szavak();
+        static AkasztofaJatek jatek;
         static void Main(string[] args)
         {
-            
+            Console.Write("Ki játszik: ");
+            string nev = Console.ReadLine();
+            Console.Write("Nehéz vagy könnnyű (n/k)? ");
+            string valasz = Console.ReadLine();
+
+            jatek = new AkasztofaJatek(nev, valasz == "n");
+
+            jatek.JatekElinditas();
 
             Console.ReadKey();
         }

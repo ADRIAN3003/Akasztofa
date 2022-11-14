@@ -96,7 +96,6 @@ namespace AkasztofaKonzol.SajatOsztaly
             this.nev = nev;
             this.nehezseg = nehezseg;
             szo = szavas.VeletlenSzo(nehezseg);
-            Console.WriteLine(szo);
             AlapBeallitasok();
         }
 

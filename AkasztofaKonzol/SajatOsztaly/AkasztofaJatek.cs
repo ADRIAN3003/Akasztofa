@@ -14,26 +14,16 @@ namespace AkasztofaKonzol.SajatOsztaly
         public AkasztofaJatek(string nev, bool nehezseg)
         {
             jatek = new Game(nev, nehezseg);
-            
-            JatekElinditas();
         }
 
-        private void JatekElinditas()
+        public void JatekElinditas()
         {
-            string tipp;
+            JatekMenet();
+            EredmenyKiiras();
+        }
 
-            while (!jatek.Vege)
-            {
-                Console.WriteLine($"Szóhossz: " + jatek.OsszProba);
-                Console.WriteLine($"Lehetőség: " + jatek.Lehetoseg);
-                Console.WriteLine($"Helytelen tippek: " + jatek.Helytelens);
-                Console.WriteLine($"Nem kitalált: " + jatek.NemKitalalt);
-                Console.Write("Kérek egy tippet: ");
-                tipp = Console.ReadLine();
-                Console.WriteLine("-----------------------------------------");
-                jatek.Vizsgalat(tipp);
-            }
-
+        private void EredmenyKiiras()
+        {
             if (jatek.Lehetoseg == 0)
             {
                 Console.WriteLine(jatek.ToString());
@@ -44,6 +34,28 @@ namespace AkasztofaKonzol.SajatOsztaly
                 Console.WriteLine(jatek.NemKitalalt);
                 Console.WriteLine("Sikerült kitalálni");
             }
+        }
+
+        private void JatekMenet()
+        {
+            string tipp;
+
+            while (!jatek.Vege)
+            {
+                AdatokKiirasa();
+                Console.Write("Kérek egy tippet: ");
+                tipp = Console.ReadLine();
+                Console.WriteLine("-----------------------------------------");
+                jatek.Vizsgalat(tipp);
+            }
+        }
+
+        private void AdatokKiirasa()
+        {
+            Console.WriteLine($"Szóhossz: " + jatek.OsszProba);
+            Console.WriteLine($"Lehetőség: " + jatek.Lehetoseg);
+            Console.WriteLine($"Helytelen tippek: " + jatek.Helytelens);
+            Console.WriteLine($"Nem kitalált: " + jatek.NemKitalalt);
         }
     }
 }
