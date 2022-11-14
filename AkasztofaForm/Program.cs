@@ -16,7 +16,7 @@ namespace AkasztofaForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNevBekeres());
+            Application.Run(new frmUjJatek());
         }
     }
 }

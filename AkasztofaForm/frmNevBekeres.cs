@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AkasztofaForm
 {
-    public partial class frmNevBekeres : Form
+    public partial class frmUjJatek : Form
     {
-        public frmNevBekeres()
+        public frmUjJatek()
         {
             InitializeComponent();
         }
