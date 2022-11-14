@@ -43,6 +43,7 @@ namespace AkasztofaForm
             this.Name = "frmFo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Játék";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmFo_FormClosed);
             this.ResumeLayout(false);
 
         }

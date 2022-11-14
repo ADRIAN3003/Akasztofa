@@ -13,9 +13,23 @@ namespace AkasztofaForm
 {
     public partial class frmFo : Form
     {
-        public frmFo()
+        string nev;
+        bool nehezseg;
+        Game jatek;
+
+        public frmFo(string nev, bool nehezseg)
         {
             InitializeComponent();
+            this.nev = nev;
+            this.nehezseg = nehezseg;
+
+            jatek = new Game(nev, nehezseg);
+            this.Text += " - " + nev;
+        }
+
+        private void frmFo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
