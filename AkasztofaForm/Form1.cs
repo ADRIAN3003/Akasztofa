@@ -16,18 +16,35 @@ namespace AkasztofaForm
         string nev;
         bool nehezseg;
         Game jatek;
+        List<Bitmap> kepek = new List<Bitmap>();
 
         public frmFo(string nev, bool nehezseg)
         {
             InitializeComponent();
             this.nev = nev;
             this.nehezseg = nehezseg;
-
+            KepFeltoltes();
             jatek = new Game(nev, nehezseg);
             this.Text += " - " + nev + (nehezseg ? " - Nehéz" : " - Könnyű");
             lblEddigKitalalt.Text = SzetHuz(jatek.NemKitalalt);
             lblVoltak.Text = "";
+            lblLehetosegek.Text = jatek.Lehetoseg + "";
             tbTipp.Focus();
+        }
+
+        private void KepFeltoltes()
+        {
+            kepek.Add(Properties.Resources.kep0);
+            kepek.Add(Properties.Resources.kep1);
+            kepek.Add(Properties.Resources.kep2);
+            kepek.Add(Properties.Resources.kep3);
+            kepek.Add(Properties.Resources.kep4);
+            kepek.Add(Properties.Resources.kep5);
+            kepek.Add(Properties.Resources.kep6);
+            kepek.Add(Properties.Resources.kep7);
+            kepek.Add(Properties.Resources.kep8);
+            kepek.Add(Properties.Resources.kep9);
+            kepek.Add(Properties.Resources.kep10);
         }
 
         private string SzetHuz(string nemKitalalt)
@@ -65,6 +82,20 @@ namespace AkasztofaForm
                 jatek.Vizsgalat(tbTipp.Text);
                 lblEddigKitalalt.Text = SzetHuz(jatek.NemKitalalt);
                 lblVoltak.Text = jatek.Helytelens;
+                lblLehetosegek.Text = jatek.Lehetoseg + "";
+                pbKepek.Image = kepek[10 - jatek.Lehetoseg];
+
+                if (jatek.Lehetoseg == 0)
+                {
+                    MessageBox.Show($"Játék vége!\nNem sikerült kitalálnod a szót!\n{jatek.ToString()} szó lett volna a megfejtés!");
+                    Application.Exit();
+                }
+                else if (jatek.Vege)
+                {
+                    MessageBox.Show("Siker!\nKitaláltad!");
+                    Application.Exit();
+                }
+
                 tbTipp.Text = "";
                 tbTipp.Focus();
             }

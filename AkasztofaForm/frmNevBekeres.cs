@@ -16,6 +16,7 @@ namespace AkasztofaForm
         {
             InitializeComponent();
             rbKonnyu.Checked = true;
+            tbNev.Focus();
         }
 
         private void btnKilepes_Click(object sender, EventArgs e)

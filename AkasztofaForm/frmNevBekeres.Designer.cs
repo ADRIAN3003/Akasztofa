@@ -32,10 +32,10 @@ namespace AkasztofaForm
             this.label1 = new System.Windows.Forms.Label();
             this.tbNev = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbNehez = new System.Windows.Forms.RadioButton();
+            this.rbKonnyu = new System.Windows.Forms.RadioButton();
             this.btnKezdes = new System.Windows.Forms.Button();
             this.btnKilepes = new System.Windows.Forms.Button();
-            this.rbKonnyu = new System.Windows.Forms.RadioButton();
-            this.rbNehez = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +45,7 @@ namespace AkasztofaForm
             this.label1.Location = new System.Drawing.Point(23, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 20);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Név:";
             // 
             // tbNev
@@ -53,7 +53,7 @@ namespace AkasztofaForm
             this.tbNev.Location = new System.Drawing.Point(69, 31);
             this.tbNev.Name = "tbNev";
             this.tbNev.Size = new System.Drawing.Size(158, 26);
-            this.tbNev.TabIndex = 1;
+            this.tbNev.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -62,35 +62,20 @@ namespace AkasztofaForm
             this.groupBox1.Location = new System.Drawing.Point(27, 74);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 59);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nehézség";
             // 
-            // btnKezdes
+            // rbNehez
             // 
-            this.btnKezdes.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnKezdes.FlatAppearance.BorderSize = 0;
-            this.btnKezdes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKezdes.Location = new System.Drawing.Point(27, 160);
-            this.btnKezdes.Name = "btnKezdes";
-            this.btnKezdes.Size = new System.Drawing.Size(90, 33);
-            this.btnKezdes.TabIndex = 3;
-            this.btnKezdes.Text = "Kezdés";
-            this.btnKezdes.UseVisualStyleBackColor = false;
-            this.btnKezdes.Click += new System.EventHandler(this.btnKezdes_Click);
-            // 
-            // btnKilepes
-            // 
-            this.btnKilepes.BackColor = System.Drawing.Color.Red;
-            this.btnKilepes.FlatAppearance.BorderSize = 0;
-            this.btnKilepes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKilepes.Location = new System.Drawing.Point(137, 160);
-            this.btnKilepes.Name = "btnKilepes";
-            this.btnKilepes.Size = new System.Drawing.Size(90, 33);
-            this.btnKilepes.TabIndex = 3;
-            this.btnKilepes.Text = "Kilépés";
-            this.btnKilepes.UseVisualStyleBackColor = false;
-            this.btnKilepes.Click += new System.EventHandler(this.btnKilepes_Click);
+            this.rbNehez.AutoSize = true;
+            this.rbNehez.Location = new System.Drawing.Point(110, 26);
+            this.rbNehez.Name = "rbNehez";
+            this.rbNehez.Size = new System.Drawing.Size(73, 24);
+            this.rbNehez.TabIndex = 1;
+            this.rbNehez.TabStop = true;
+            this.rbNehez.Text = "Nehéz";
+            this.rbNehez.UseVisualStyleBackColor = true;
             // 
             // rbKonnyu
             // 
@@ -103,16 +88,32 @@ namespace AkasztofaForm
             this.rbKonnyu.Text = "Könnyű";
             this.rbKonnyu.UseVisualStyleBackColor = true;
             // 
-            // rbNehez
+            // btnKezdes
             // 
-            this.rbNehez.AutoSize = true;
-            this.rbNehez.Location = new System.Drawing.Point(110, 26);
-            this.rbNehez.Name = "rbNehez";
-            this.rbNehez.Size = new System.Drawing.Size(73, 24);
-            this.rbNehez.TabIndex = 0;
-            this.rbNehez.TabStop = true;
-            this.rbNehez.Text = "Nehéz";
-            this.rbNehez.UseVisualStyleBackColor = true;
+            this.btnKezdes.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnKezdes.FlatAppearance.BorderSize = 0;
+            this.btnKezdes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKezdes.Location = new System.Drawing.Point(27, 160);
+            this.btnKezdes.Name = "btnKezdes";
+            this.btnKezdes.Size = new System.Drawing.Size(90, 33);
+            this.btnKezdes.TabIndex = 2;
+            this.btnKezdes.Text = "Kezdés";
+            this.btnKezdes.UseVisualStyleBackColor = false;
+            this.btnKezdes.Click += new System.EventHandler(this.btnKezdes_Click);
+            // 
+            // btnKilepes
+            // 
+            this.btnKilepes.BackColor = System.Drawing.Color.Red;
+            this.btnKilepes.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKilepes.FlatAppearance.BorderSize = 0;
+            this.btnKilepes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKilepes.Location = new System.Drawing.Point(137, 160);
+            this.btnKilepes.Name = "btnKilepes";
+            this.btnKilepes.Size = new System.Drawing.Size(90, 33);
+            this.btnKilepes.TabIndex = 3;
+            this.btnKilepes.Text = "Kilépés";
+            this.btnKilepes.UseVisualStyleBackColor = false;
+            this.btnKilepes.Click += new System.EventHandler(this.btnKilepes_Click);
             // 
             // frmUjJatek
             // 

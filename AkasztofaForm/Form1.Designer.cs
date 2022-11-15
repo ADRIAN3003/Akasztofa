@@ -36,6 +36,8 @@ namespace AkasztofaForm
             this.tbTipp = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblVoltak = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblLehetosegek = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbKepek)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,6 +111,27 @@ namespace AkasztofaForm
             this.lblVoltak.Text = "label3";
             this.lblVoltak.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(12, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(232, 55);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Lehetőségek";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLehetosegek
+            // 
+            this.lblLehetosegek.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblLehetosegek.ForeColor = System.Drawing.Color.Red;
+            this.lblLehetosegek.Location = new System.Drawing.Point(12, 134);
+            this.lblLehetosegek.Name = "lblLehetosegek";
+            this.lblLehetosegek.Size = new System.Drawing.Size(232, 55);
+            this.lblLehetosegek.TabIndex = 5;
+            this.lblLehetosegek.Text = "Lehetőségek";
+            this.lblLehetosegek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmFo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -117,6 +140,8 @@ namespace AkasztofaForm
             this.ControlBox = false;
             this.Controls.Add(this.tbTipp);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLehetosegek);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblVoltak);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblEddigKitalalt);
@@ -144,6 +169,8 @@ namespace AkasztofaForm
         private System.Windows.Forms.TextBox tbTipp;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblVoltak;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblLehetosegek;
     }
 }
 
