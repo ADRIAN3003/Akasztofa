@@ -51,5 +51,17 @@ namespace AkasztofaForm
         {
             Application.Exit();
         }
+
+        private void tbTipp_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (tbTipp.TextLength >= 1 && e.KeyCode != Keys.Enter)
+            {
+                tbTipp.Text = tbTipp.Text.Substring(0, tbTipp.TextLength - 1);
+            }
+            if (e.KeyCode == Keys.Enter && tbTipp.TextLength == 1)
+            {
+                MessageBox.Show(tbTipp.Text);
+            }
+        }
     }
 }
