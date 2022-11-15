@@ -35,7 +35,7 @@ namespace AkasztofaForm
             int j = 0;
             while (nemKitalalt.Length - 1 > j)
             {
-                tmp += nemKitalalt[j] + " ";
+                tmp += nemKitalalt[j++] + " ";
             }
             tmp += nemKitalalt[j];
 
