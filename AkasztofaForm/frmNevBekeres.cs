@@ -32,7 +32,7 @@ namespace AkasztofaForm
             else
             {
                 this.Hide();
-                frmFo frmFo = new frmFo(tbNev.Text, rbKonnyu.Checked);
+                frmFo frmFo = new frmFo(tbNev.Text, rbNehez.Checked);
                 frmFo.Show();
             }
         }

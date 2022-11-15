@@ -24,8 +24,10 @@ namespace AkasztofaForm
             this.nehezseg = nehezseg;
 
             jatek = new Game(nev, nehezseg);
-            this.Text += " - " + nev + (nehezseg ? " - Könnyű" : " - Nehéz");
+            this.Text += " - " + nev + (nehezseg ? " - Nehéz" : " - Könnyű");
             lblEddigKitalalt.Text = SzetHuz(jatek.NemKitalalt);
+            lblVoltak.Text = "";
+            tbTipp.Focus();
         }
 
         private string SzetHuz(string nemKitalalt)
@@ -60,7 +62,11 @@ namespace AkasztofaForm
             }
             if (e.KeyCode == Keys.Enter && tbTipp.TextLength == 1)
             {
-                MessageBox.Show(tbTipp.Text);
+                jatek.Vizsgalat(tbTipp.Text);
+                lblEddigKitalalt.Text = SzetHuz(jatek.NemKitalalt);
+                lblVoltak.Text = jatek.Helytelens;
+                tbTipp.Text = "";
+                tbTipp.Focus();
             }
         }
     }

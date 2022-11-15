@@ -44,6 +44,7 @@ namespace AkasztofaKonzol.SajatOsztaly
 
         public void Vizsgalat(string tipp)
         {
+            tipp = tipp.ToUpper();
             if (!NemKitalalt.Contains(tipp) && !helytelens.Contains(tipp))
             {
                 if (szo.Contains(tipp))
